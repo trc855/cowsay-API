@@ -1,7 +1,7 @@
 class CowController < ApplicationController
   def say
     params.require(:message)
-    params.permit(:cow, :balloon_type, :face_type)
+    params.permit(:message, :cow, :balloon_type, :face_type)
 
     message = params[:message]
     cow = params[:cow] || 'cow'
